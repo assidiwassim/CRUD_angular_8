@@ -1,0 +1,26 @@
+<div class="jumbotron" style="padding: 11px 18px;">
+    <h4>Liste des concours</h4>
+   
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nom concour</th>
+        <th>Description</th>
+        <th>Date de début</th>
+        <th>Date de fin</th>
+        <th><a routerLink="/admin/concours/add" routerLinkActive="active" class="btn btn-primary btn-block" style="color:#fff">Ajouter</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let concour of concours ;index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{concour.nom}}</td>
+        <td>{{concour.desc}}</td>
+        <td>{{concour.date_deb}}</td>
+        <td>{{concour.date_fin}}</td>
+        <td><a class="btn btn-primary" style="color:#fff;width: 49%;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a class="btn btn-primary " style="color:#fff;width: 49%;margin-left: 1%;" (click)="remove(concour._id)" ><i class="fa fa-times" aria-hidden="true"></i></a></td>
+      </tr>
+    </tbody>
+  </table>

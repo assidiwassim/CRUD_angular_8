@@ -1,0 +1,26 @@
+<div class="header">
+    <a href="#" id="menu-action">
+      <i class="fa fa-bars"></i>
+      <span>Close</span>
+    </a>
+    <div class="logo">
+      Administration
+      <div class="btn-container pull-right" (click)="logout()">
+        <a  class="btn btn-default">Déconnexion</a> 
+    </div>
+    </div>
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li><a><i class="fa fa-server"></i><span>Concours</span></a></li>
+      </ul>
+  </div>
+  
+  <!-- Content -->
+  <div class="main">
+    <div class="">
+      
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+
