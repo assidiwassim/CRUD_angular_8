@@ -30,6 +30,7 @@ ngOnInit() {
 
   this.loginForm = this.formBuilder.group({
     nom:  ['', Validators.required],
+    type:  ['', Validators.required],
     desc: ['', Validators.required],
     date_deb: ['', Validators.required],
     date_fin: ['', Validators.required],
@@ -55,7 +56,7 @@ onSubmit() {
       .subscribe(
           data => {
             console.log(data)
-
+            this.router.navigate(['/admin/concours']);
           
           },
           error => {

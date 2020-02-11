@@ -7,6 +7,7 @@ var timestamps = require('mongoose-timestamp');
 
 var ConcoursSchema=new Schema({
     nom: {type: String},
+    type: {type: String},
     desc: {type: String},
     date_deb: {type: String},
     date_fin: {type: String},

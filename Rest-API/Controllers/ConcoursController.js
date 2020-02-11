@@ -20,6 +20,7 @@ module.exports={
       
             const concourData = {
                 nom: req.body.nom,
+                type: req.body.type,
                 desc: req.body.desc, 
                 date_deb: req.body.date_deb, 
                 date_fin: req.body.date_fin, 
